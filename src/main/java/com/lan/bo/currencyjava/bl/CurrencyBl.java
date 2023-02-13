@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.lan.bo.currencyjava.customException.InvalidDataException;
 import com.lan.bo.currencyjava.customException.WrongFormatException;
 import com.lan.bo.currencyjava.model.dto.ResponseDto;
 import com.lan.bo.currencyjava.model.entity.ErrorModel;
@@ -26,9 +27,10 @@ public class CurrencyBl {
         this.currencyService = currencyService;
     }
 
-    public Object getData(String from, String to, String amount) throws WrongFormatException, JsonMappingException, JsonProcessingException{
+    public Object getData(String from, String to, String amount) throws WrongFormatException, JsonMappingException, JsonProcessingException, InvalidDataException{
        
         BigDecimal amount2 = BigDecimal.valueOf(Double.valueOf(amount));
+        if(amount2.compareTo(BigDecimal.valueOf(0)) < 0) throw new InvalidDataException("Numero menor a 0");
         
         ResponseEntity<String> response = currencyService.responseByApi(from, to, amount2);
         ObjectMapper obMapper = new ObjectMapper();
@@ -88,6 +90,8 @@ public class CurrencyBl {
             if(amount == null){
                 message = "Falta el parametro necesario de (amount)";
             } 
+        } catch(InvalidDataException e){
+            message = e.getMessage();
         }
 
         return new ResponseDto<String>(null , message, false);

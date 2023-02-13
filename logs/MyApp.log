@@ -47,3 +47,51 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2023-02-13 10:58:52,215 [http-nio-8080-exec-1] INFO  com.lan.bo.currencyjava.api.CurrencyApi            - Dummy info message
 2023-02-13 10:58:52,215 [http-nio-8080-exec-1] WARN  com.lan.bo.currencyjava.api.CurrencyApi            - Dummy warning message.
 2023-02-13 10:58:52,216 [http-nio-8080-exec-1] ERROR com.lan.bo.currencyjava.api.CurrencyApi            - Dummy error message.
+2023-02-13 12:57:34,054 [main] INFO  c.l.b.c.CurrencyjavaApplication                    - Starting CurrencyjavaApplication using Java 17.0.5 with PID 18300 (C:\Users\Alan\Academic\University\Arquitectura\CurrencyApi\currencyjava\target\classes started by Alan in C:\Users\Alan\Academic\University\Arquitectura\CurrencyApi\currencyjava)
+2023-02-13 12:57:34,062 [main] INFO  c.l.b.c.CurrencyjavaApplication                    - No active profile set, falling back to 1 default profile: "default"
+2023-02-13 12:57:36,103 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port(s): 8080 (http)
+2023-02-13 12:57:36,128 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-13 12:57:36,130 [main] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2023-02-13 12:57:36,131 [main] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-13 12:57:36,339 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2023-02-13 12:57:36,351 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 2165 ms
+2023-02-13 12:57:37,010 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Starting ProtocolHandler ["http-nio-8080"]
+2023-02-13 12:57:37,084 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-13 12:57:37,103 [main] INFO  c.l.b.c.CurrencyjavaApplication                    - Started CurrencyjavaApplication in 4.323 seconds (process running for 5.774)
+2023-02-13 12:58:02,030 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-13 12:58:02,030 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet                  - Initializing Servlet 'dispatcherServlet'
+2023-02-13 12:58:02,040 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet                  - Completed initialization in 2 ms
+2023-02-13 12:58:02,144 [http-nio-8080-exec-2] INFO  com.lan.bo.currencyjava.api.CurrencyApi            - Hi, Sam  debugg log
+2023-02-13 12:58:02,147 [http-nio-8080-exec-2] INFO  com.lan.bo.currencyjava.api.CurrencyApi            - Dummy info message
+2023-02-13 12:58:02,149 [http-nio-8080-exec-2] WARN  com.lan.bo.currencyjava.api.CurrencyApi            - Dummy warning message.
+2023-02-13 12:58:02,150 [http-nio-8080-exec-2] ERROR com.lan.bo.currencyjava.api.CurrencyApi            - Dummy error message.
+2023-02-13 13:05:38,760 [main] INFO  c.l.b.c.CurrencyjavaApplication                    - Starting CurrencyjavaApplication using Java 17.0.5 with PID 26720 (C:\Users\Alan\Academic\University\Arquitectura\CurrencyApi\currencyjava\target\classes started by Alan in C:\Users\Alan\Academic\University\Arquitectura\CurrencyApi\currencyjava)
+2023-02-13 13:05:38,766 [main] INFO  c.l.b.c.CurrencyjavaApplication                    - No active profile set, falling back to 1 default profile: "default"
+2023-02-13 13:05:40,213 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port(s): 8080 (http)
+2023-02-13 13:05:40,235 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-13 13:05:40,237 [main] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2023-02-13 13:05:40,239 [main] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-13 13:05:40,390 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2023-02-13 13:05:40,392 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 1555 ms
+2023-02-13 13:05:40,904 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Starting ProtocolHandler ["http-nio-8080"]
+2023-02-13 13:05:40,961 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-13 13:05:40,977 [main] INFO  c.l.b.c.CurrencyjavaApplication                    - Started CurrencyjavaApplication in 2.902 seconds (process running for 4.114)
+2023-02-13 13:05:51,020 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-13 13:05:51,027 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet                  - Initializing Servlet 'dispatcherServlet'
+2023-02-13 13:05:51,030 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet                  - Completed initialization in 1 ms
+2023-02-13 13:05:51,120 [http-nio-8080-exec-2] INFO  com.lan.bo.currencyjava.api.CurrencyApi            - Hi, Sam  debugg log
+2023-02-13 13:05:51,129 [http-nio-8080-exec-2] INFO  com.lan.bo.currencyjava.api.CurrencyApi            - Dummy info message
+2023-02-13 13:05:51,130 [http-nio-8080-exec-2] WARN  com.lan.bo.currencyjava.api.CurrencyApi            - Dummy warning message.
+2023-02-13 13:05:51,131 [http-nio-8080-exec-2] ERROR com.lan.bo.currencyjava.api.CurrencyApi            - Dummy error message.
+2023-02-13 13:05:59,286 [http-nio-8080-exec-3] INFO  com.lan.bo.currencyjava.api.CurrencyApi            - Hi, Sam  debugg log
+2023-02-13 13:05:59,290 [http-nio-8080-exec-3] INFO  com.lan.bo.currencyjava.api.CurrencyApi            - Dummy info message
+2023-02-13 13:05:59,292 [http-nio-8080-exec-3] WARN  com.lan.bo.currencyjava.api.CurrencyApi            - Dummy warning message.
+2023-02-13 13:05:59,293 [http-nio-8080-exec-3] ERROR com.lan.bo.currencyjava.api.CurrencyApi            - Dummy error message.
+2023-02-13 13:06:07,606 [http-nio-8080-exec-4] INFO  com.lan.bo.currencyjava.api.CurrencyApi            - Hi, Sam  debugg log
+2023-02-13 13:06:07,607 [http-nio-8080-exec-4] INFO  com.lan.bo.currencyjava.api.CurrencyApi            - Dummy info message
+2023-02-13 13:06:07,608 [http-nio-8080-exec-4] WARN  com.lan.bo.currencyjava.api.CurrencyApi            - Dummy warning message.
+2023-02-13 13:06:07,609 [http-nio-8080-exec-4] ERROR com.lan.bo.currencyjava.api.CurrencyApi            - Dummy error message.
+2023-02-13 13:06:13,074 [http-nio-8080-exec-5] INFO  com.lan.bo.currencyjava.api.CurrencyApi            - Hi, Sam  debugg log
+2023-02-13 13:06:13,074 [http-nio-8080-exec-5] INFO  com.lan.bo.currencyjava.api.CurrencyApi            - Dummy info message
+2023-02-13 13:06:13,074 [http-nio-8080-exec-5] WARN  com.lan.bo.currencyjava.api.CurrencyApi            - Dummy warning message.
+2023-02-13 13:06:13,074 [http-nio-8080-exec-5] ERROR com.lan.bo.currencyjava.api.CurrencyApi            - Dummy error message.
