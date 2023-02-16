@@ -13,8 +13,10 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lan.bo.currencyjava.customException.InvalidDataException;
 import com.lan.bo.currencyjava.customException.WrongFormatException;
+import com.lan.bo.currencyjava.model.dao.ResponseDao;
 import com.lan.bo.currencyjava.model.dto.ResponseDto;
 import com.lan.bo.currencyjava.model.entity.ErrorModel;
+import com.lan.bo.currencyjava.model.entity.ResponseEpModel;
 import com.lan.bo.currencyjava.model.entity.ResponseModel;
 import com.lan.bo.currencyjava.service.CurrencyService;
 
@@ -22,9 +24,11 @@ import com.lan.bo.currencyjava.service.CurrencyService;
 public class CurrencyBl {
 
     private CurrencyService currencyService;
+    private ResponseDao responseDao;
 
-    public  CurrencyBl(CurrencyService currencyService){
+    public  CurrencyBl(CurrencyService currencyService, ResponseDao responseDao){
         this.currencyService = currencyService;
+        this.responseDao = responseDao;
     }
 
     public Object getData(String from, String to, String amount) throws WrongFormatException, JsonMappingException, JsonProcessingException, InvalidDataException{
@@ -52,14 +56,14 @@ public class CurrencyBl {
         String message = "";
         try{
             ResponseModel response = (ResponseModel) getData(from, to, amount);
-            Map<String, Object> toReturn = new HashMap<>();
-            toReturn.put("from", from);
-            toReturn.put("to", to);
-            toReturn.put("amount", amount);
-            toReturn.put("result", response.getResult());
-            toReturn.put("date", response.getDate());
+            ResponseEpModel responseReturn = 
+            new ResponseEpModel(from, to,  BigDecimal.valueOf(Double.valueOf(amount)), response.getResult(), response.getDate());
 
-            return new ResponseDto<Map<String,Object>>(toReturn, null, true);
+            
+            // goes to db
+            responseDao.createRecord(responseReturn);
+            // response to user
+            return new ResponseDto<ResponseEpModel>(responseReturn, null, true);
 
         }catch(WrongFormatException ex){
             ErrorModel error = (ErrorModel) ex.getObj();
