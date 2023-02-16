@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lan.bo.currencyjava.customException.InvalidDataException;
 import com.lan.bo.currencyjava.customException.WrongFormatException;
-import com.lan.bo.currencyjava.model.dao.ResponseDao;
+import com.lan.bo.currencyjava.daos.ResponseDao;
 import com.lan.bo.currencyjava.model.dto.ResponseDto;
 import com.lan.bo.currencyjava.model.entity.ErrorModel;
 import com.lan.bo.currencyjava.model.entity.ResponseEpModel;
@@ -22,13 +23,16 @@ import com.lan.bo.currencyjava.service.CurrencyService;
 
 @Service
 public class CurrencyBl {
-
-    private CurrencyService currencyService;
+   
+    @Autowired
     private ResponseDao responseDao;
 
-    public  CurrencyBl(CurrencyService currencyService, ResponseDao responseDao){
+    private CurrencyService currencyService;
+    
+
+    public  CurrencyBl(CurrencyService currencyService){
         this.currencyService = currencyService;
-        this.responseDao = responseDao;
+        
     }
 
     public Object getData(String from, String to, String amount) throws WrongFormatException, JsonMappingException, JsonProcessingException, InvalidDataException{
@@ -61,7 +65,7 @@ public class CurrencyBl {
 
             
             // goes to db
-            responseDao.createRecord(responseReturn);
+            responseDao.createRecord(responseReturn, responseReturn.castDate());
             // response to user
             return new ResponseDto<ResponseEpModel>(responseReturn, null, true);
 

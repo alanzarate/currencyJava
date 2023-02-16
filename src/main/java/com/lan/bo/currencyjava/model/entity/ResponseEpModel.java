@@ -1,6 +1,7 @@
 package com.lan.bo.currencyjava.model.entity;
 
 import java.math.BigDecimal;
+import java.sql.Date;
 
 public class ResponseEpModel {
     private String from;
@@ -46,5 +47,9 @@ public class ResponseEpModel {
     }
     public void setTo(String to) {
         this.to = to;
+    }
+
+    public Date castDate(){
+        return Date.valueOf(this.date);
     }
 }
